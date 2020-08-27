@@ -8,7 +8,7 @@ In app.components.ts I included the GoogleTagManagerService and implemented OnIn
 
 In GTM dashboard I check whether a custom pageview event in datalayer exists and then fire a Google Analytics and Facebook tag with the pagePath variable as a pageview.
 
-`
+```
 // Sends pageview event to GTM datalayer
 this.router.events.forEach(item => {
    if (item instanceof NavigationEnd) {
@@ -19,7 +19,7 @@ this.router.events.forEach(item => {
       this.gtmService.pushTag(gtmTag);
    }
 });
-`
+```
 
 # Events
 
