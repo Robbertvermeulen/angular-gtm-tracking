@@ -17,7 +17,7 @@ import { MealplanComponent } from './mealplan/mealplan.component';
       AppRoutingModule
    ],
    providers: [
-      { provide: 'googleTagManagerId', useValue: 'GTM-PVTKHSZ' }
+      { provide: 'googleTagManagerId', useValue: 'GTM-PVTKHSZ' } // This is a temporarily GTM ID. We have to change this later and maybe store it in a environment var.
    ],
    bootstrap: [AppComponent]
 })
