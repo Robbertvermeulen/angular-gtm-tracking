@@ -4,9 +4,22 @@ Based on Angular Google Tag Manager Service https://www.npmjs.com/package/angula
 
 # Pageviews
 
-In app.components.ts I included the GoogleTagManagerService and implemented OnInit from angular core. Then injected the GoogleTagManagerService in the constructor. Then checked the routes in the ngOnInit() method and send a pageview event to the GTM datalayer each time a route changes.
+In app.components.ts I included the GoogleTagManagerService and implemented OnInit from angular core. Then injected the GoogleTagManagerService in the constructor. Then checked the routes in the ngOnInit() method and send a pageview event together with the pagePath to the GTM datalayer each time a route changes.
 
-In GTM dashboard I check whether a custom pageview event in datalayer exists and then fire a Google Analytics and Facebook tag with the pagePath variable as a pageview.   
+In GTM dashboard I check whether a custom pageview event in datalayer exists and then fire a Google Analytics and Facebook tag with the pagePath variable as a pageview.
+
+`
+// Sends pageview event to GTM datalayer
+this.router.events.forEach(item => {
+   if (item instanceof NavigationEnd) {
+      const gtmTag = {
+         event: 'pageview',
+         pagePath: item.url
+      };
+      this.gtmService.pushTag(gtmTag);
+   }
+});
+`
 
 # Events
 
