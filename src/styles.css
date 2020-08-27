@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+   font-family: sans-serif;
+}
+
+.header {
+   margin-bottom: 1.25em;
+   padding: 1.25em;
+   background-color: black;
+}
+
+.header a {
+   padding: 0.625em;
+   color: #fff;
+}
+
+.btn {
+   padding: 1em 1.25em;
+   display: inline-block;
+   border-radius: 30px;
+   background-color: grey;
+   text-decoration: none;
+   color: #fff;
+}
