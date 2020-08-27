@@ -25,4 +25,6 @@ this.router.events.forEach(item => {
 
 In mealplan.component.html I added a js-gtm-click class and data-context attribute so I can check for a click in GTM dashboard. When I click event occurs, I check the class and data-context attribute of the element. If the data-context for example is "start-btn" I fire a Google Analytics tag and Facebook tag with a custom add to cart event.
 
+`<a routerLink="/start" routerLinkActive="active" class="btn js-gtm-click" data-context="start-btn">Start meal plan</a>`
+
 # E-commerce / Purchase tracking
